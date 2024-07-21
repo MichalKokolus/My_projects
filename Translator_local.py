@@ -13,7 +13,8 @@ from os.path import abspath, join
 
 
 
-pt_save_directory = "C:/Users/kokol/Documents/Personal/03_My_projects/01_LLMs/Saved_pretrained_models/t5_base"
+current_directory = os.getcwd()
+pt_save_directory = abspath(os.path.join(current_directory, '..', 'Saved_pretrained_models\\t5_base'))
 
 
 pipe = pipeline("translation_en_to_de", model=pt_save_directory, device = 0)
